@@ -1,0 +1,11 @@
+name: mlflow-example-project
+
+conda_env: conda.yaml
+
+entry_points:
+  main:
+    parameters:
+      data_dir: path
+      alpha: {type: float, default: 0.5}
+      l1_ratio: {type: float, default: 0.1}
+    command: "python train.py {data_dir} {alpha} {l1_ratio}"
